@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scratch Page – Volleyball Theme</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="bg-primary text-white py-4">
+    <div class="container text-center">
+        <h1>Volleyball Scratch Page</h1>
+        <p class="lead">A practice page to explore HTML, CSS, Bootstrap, embeds, and more.</p>
+    </div>
+</header>
+
+<main class="container my-4">
+
+<div class="row">
+<div class="col-md-8">
+
+<!-- ========================== MAIN CONTENT ========================== -->
+
+<h2 id="section-top">Welcome!</h2>
+<p>This scratch page is where I experiment with different web components while tying everything to volleyball—my favorite sport. 
+Below you’ll find images, videos, drills, and embedded content.</p>
+
+<hr>
+
+<h3>Featured Volleyball Image</h3>
+<p>This is one of my favorite action shots from NCAA men's volleyball.</p>
+<img src="https://volleyballmag.com/wp-content/uploads/2024/01/UCLAs-Andrew-Rowan-makes-the-no-look-dump-against-Fort-Valley-State-1-4-24.jpg"
+     class="img-fluid rounded shadow mb-4" alt="Volleyball action photo">
+
+<hr>
+
+<h3>Volleyball Highlight Video</h3>
+<p>Here’s a great compilation of volleyball highlights—high energy and great plays!</p>
+
+<div class="ratio ratio-16x9 mb-4">
+    <iframe src="https://www.youtube.com/embed/IlY2nQrIjsQ"
+            title="Volleyball highlights"
+            allowfullscreen>
+    </iframe>
+</div>
+
+<hr>
+
+<h3>On-Page Anchor Example</h3>
+<p>Want to jump ahead?  
+<a href="#drills">Click here to skip to the drills section.</a></p>
+
+<hr>
+
+<h3>Tableau Embed</h3>
+<p>Replace the placeholder below with your actual Tableau embed code once your workbook is published.</p>
+
+<div class="tableau-embed mb-4">
+    <iframe src="about:blank"
+            style="border:none; width:100%; height:450px;"
+            title="Tableau placeholder">
+        Your Tableau embed code goes here
+    </iframe>
+</div>
+
+</div>
+
+<!-- ========================== SIDEBAR ========================== -->
+
+<div class="col-md-4">
+    <aside class="p-3 bg-light border rounded shadow-sm">
+        <h4>Quick Links</h4>
+        <ul class="list-unstyled">
+            <li><a href="#section-top">Back to Top</a></li>
+            <li><a href="#drills">Volleyball Drills</a></li>
+            <li><a href="joke.html">Joke Generator</a></li>
+        </ul>
+    </aside>
+</div>
+
+</div>
+
+<!-- ========================== DRILLS SECTION ========================== -->
+
+<section id="drills" class="my-5">
+    <div class="p-4 rounded border bg-white shadow-sm">
+        <h2>Volleyball Drills & Training</h2>
+        <p>Here are some basic drills that players of all levels can work on:</p>
+
+        <div class="p-3 mb-2" style="background:#fffbd6; border-radius:6px;">
+            <strong>Drill 1:</strong> Passing to target – focus on platform control.
+        </div>
+
+        <div class="p-3 mb-2" style="background:#dff7e3; border-radius:6px;">
+            <strong>Drill 2:</strong> Serving accuracy – hit zones on the court consistently.
+        </div>
+
+        <div class="p-3 mb-2" style="background:#e6f0ff; border-radius:6px;">
+            <strong>Drill 3:</strong> Team rotations – practice transitions and court coverage.
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer class="bg-dark text-white py-3 text-center">
+    <small>&copy; 2025 James Burton – Scratch Page</small>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
