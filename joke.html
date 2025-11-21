@@ -1,75 +1,62 @@
-<!-- ==========================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joke Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #f3f8ff;
+        }
+        #joke-box {
+            font-size: 1.3rem;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="bg-primary text-white py-4">
+    <div class="container text-center">
+        <h1>Joke Generator</h1>
+        <p class="lead">Click the button to get a random joke</p>
+    </div>
+</header>
+
+<main class="container my-4">
+
+    <div class="p-4 bg-white shadow-sm rounded text-center">
+        <div id="joke-box">Press the button to hear a joke!</div>
+
+        <button class="btn btn-primary mt-3" onclick="tellJoke()">Get a Joke</button>
+    </div>
+
+</main>
+
+<footer class="bg-dark text-white text-center py-3">
+    <small>&copy; 2025 James Burton</small>
+</footer>
+
 <script>
-// Joke generator app (self-contained). ~60 lines of JS for clarity.
-const jokes = [
-{setup: "Why did the volleyball player bring string to practice?", punchline: "To tie up the loose ends in their game."},
-{setup: "Why do programmers prefer dark mode?", punchline: "Because light attracts bugs."},
-{setup: "Why did the developer go broke?", punchline: "Because he used up all his cache."},
-{setup: "How do volleyball players talk to each other?", punchline: "They use short sets."},
-{setup: "What's a programmer's favorite place to hang out?", punchline: "The Foo Bar."},
-{setup: "Why did the server go to therapy?", punchline: "Too many requests."},
-{setup: "Why don't programmers like nature?", punchline: "It has too many bugs."},
-{setup: "How do you organize a space party?", punchline: "You planet."}
-];
+    const jokes = [
+        "Why do volleyball players make great friends? They’re always ready to set you up!",
+        "Why was the volleyball team bad at math? They couldn’t handle the four sets!",
+        "Why did the volleyball player bring string to the game? To tie up the score!",
+        "Why don’t volleyball players do well in school? Too many spikes!"
+    ];
 
-
-const setupEl = document.getElementById('setup');
-const punchEl = document.getElementById('punchline');
-const newBtn = document.getElementById('newJoke');
-const revBtn = document.getElementById('reveal');
-const shareBtn = document.getElementById('share');
-
-
-let current = null;
-
-
-function showJoke(j) {
-setupEl.textContent = j.setup;
-punchEl.textContent = '—— (hidden) ——';
-current = j;
-}
-
-
-function reveal() {
-if (!current) return;
-punchEl.textContent = current.punchline;
-}
-
-
-function randomJoke() {
-const i = Math.floor(Math.random() * jokes.length);
-return jokes[i];
-}
-
-
-newBtn.addEventListener('click', () => {
-const j = randomJoke();
-showJoke(j);
-});
-
-
-revBtn.addEventListener('click', () => {
-reveal();
-});
-
-
-shareBtn.addEventListener('click', async () => {
-if (!current) return;
-const text = `${current.setup} — ${current.punchline}`;
-try {
-await navigator.clipboard.writeText(text);
-shareBtn.textContent = 'Copied!';
-setTimeout(()=> shareBtn.textContent = 'Copy Joke', 1200);
-} catch(e) {
-alert('Copy failed — try manually selecting the text.');
-}
-});
-
-
-// initialize with one joke
-showJoke(randomJoke());
+    function tellJoke() {
+        const box = document.getElementById("joke-box");
+        const random = Math.floor(Math.random() * jokes.length);
+        box.textContent = jokes[random];
+    }
 </script>
-
 
 </body>
 </html>
